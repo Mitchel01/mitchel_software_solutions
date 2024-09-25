@@ -53,36 +53,23 @@
             </p>
         </section>
 
-        <section id="portfolio" class="section" style="background-color: #fff;">
-            <h2>Portfolio</h2>
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="imagine/2514mm.PNG" alt="Business Website">
-                    <div class="caption">Business Website</div>
-                </div>
-        
-                <div class="slide fade">
-                    <img src="imagine/ecommerce_web.PNG" alt="E-commerce Website">
-                    <div class="caption">E-commerce Website</div>
-                </div>
-        
-                <div class="slide fade">
-                    <img src="imagine/Blog.PNG" alt="Blog">
-                    <div class="caption">Blog</div>
-                </div>
-        
-                <!-- Navigation Arrows -->
-                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            </div>
-        
-            <!-- Dots/Indicators -->
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </section>
+    </section>
+
+    <section id="portfolio" class="section" style="background-color: #fff;">
+        <h2>Portfolio</h2>
+        <div class="portfolio-item">
+            <img src="imagine\2514mm.PNG" alt="Business">
+            <p>Business Website</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="imagine\ecommerce web.PNG" alt="e-commerce">
+            <p>E-commerce Website</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="imagine\Blog.PNG"  alt="Blog">
+            <p>Blog</p>
+        </div>
+    </section>
 
         <section id="testimonials" class="section">
             <h2>Testimonials</h2>
@@ -108,40 +95,8 @@
             <p>Phone: <a href="tel:+0685271378">0685271378</a></p>
             <p><a href="https://wa.me/0685271378" class="whatsapp-link">Chat with us on WhatsApp</a></p>
         </section>
-    </div>
+    
 
-    <script>
-        let slideIndex = 0;
-        autoSlideShow();
-    
-        // Function to automatically show slides
-        function autoSlideShow() {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-    
-            // Hide all slides initially
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-    
-            // Increment slideIndex to show the next slide
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1; // Reset to the first slide if index exceeds the number of slides
-            }
-    
-            // Display the current slide and update the active dot
-            slides[slideIndex - 1].style.display = "block";
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            dots[slideIndex - 1].className += " active";
-    
-            // Set the interval for auto-sliding (change 3000 to adjust the speed in milliseconds)
-            setTimeout(autoSlideShow, 3000);
-        }
-    </script>
-    
     <footer>
         <p>&copy; 2024 Mitchel Software Solutions. All Rights Reserved.</p>
         <div>
